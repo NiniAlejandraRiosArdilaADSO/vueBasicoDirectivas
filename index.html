@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sp">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,9 +10,12 @@
 </head>
 <body>
     <div id="app">
-        <input type="text" v-model="mensaje">
-        <h1>{{mensaje}}</h1>
-        <strong v-text="mensaje"></strong>
+        <label>Zona Franja: <strong>Campus</strong></label>
+        <div>
+            <input type="radio" v-model="centinela" v-bind:value="true"> --ver
+            <input type="radio" v-model="centinela" v-bind:value="false"> --ocultar
+        </div>
+        <div v-show="centinela" class="info">Los mejores programdores de colombia </div>
     </div>
 </body>
 </html>
