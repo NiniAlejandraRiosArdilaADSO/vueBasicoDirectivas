@@ -10,11 +10,20 @@
 </head>
 <body>
     <div id="app">
-        <input type="text" v-model="opcion">
-        <div v-if="opcion=='Apolo'" v-html="mensaje"></div>
-        <div v-else-if="opcion=='Artemis'" v-html="mensaje2"></div>
-        <div v-else-if="opcion=='Sputnik'" v-html="mensaje3"></div>
-        <div v-else v-html="mensaje4" class="error"></div>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Dato</th>
+                </tr>
+            </thead>
+            <tbody v-for="(val, id) in lista":key="id">
+                <tr>
+                    <td v-text="id"></td>
+                    <td v-text="val"></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
 </html>
